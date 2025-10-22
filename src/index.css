@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 190 100% 98%;
+    --foreground: 240 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 15% 15%;
+
+    --primary: 240 70% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-gradient-start: 240 70% 45%;
+    --primary-gradient-end: 200 85% 55%;
+
+    --secondary: 190 60% 95%;
+    --secondary-foreground: 240 15% 15%;
+
+    --muted: 200 40% 96%;
+    --muted-foreground: 240 8% 50%;
+
+    --accent: 25 95% 65%;
+    --accent-foreground: 240 15% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 30% 90%;
+    --input: 200 30% 90%;
+    --ring: 240 70% 45%;
+
+    --radius: 1rem;
+    
+    --hero-gradient-start: 240 70% 45%;
+    --hero-gradient-end: 200 85% 55%;
+    
+    --shadow-soft: 0 2px 8px -1px hsl(240 70% 45% / 0.08), 0 1px 4px -1px hsl(240 70% 45% / 0.04);
+    --shadow-medium: 0 8px 20px -3px hsl(240 70% 45% / 0.12), 0 4px 8px -2px hsl(240 70% 45% / 0.06);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 240 70% 45%;
+  }
+
+  .dark {
+    --background: 240 20% 10%;
+    --foreground: 190 100% 98%;
+
+    --card: 240 18% 14%;
+    --card-foreground: 190 100% 98%;
+
+    --popover: 240 18% 14%;
+    --popover-foreground: 190 100% 98%;
+
+    --primary: 200 85% 55%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-gradient-start: 240 70% 55%;
+    --primary-gradient-end: 200 85% 65%;
+
+    --secondary: 240 15% 18%;
+    --secondary-foreground: 190 100% 98%;
+
+    --muted: 240 15% 18%;
+    --muted-foreground: 200 20% 70%;
+
+    --accent: 25 95% 60%;
+    --accent-foreground: 240 15% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 190 100% 98%;
+
+    --border: 240 15% 22%;
+    --input: 240 15% 22%;
+    --ring: 200 85% 55%;
+    
+    --hero-gradient-start: 240 70% 55%;
+    --hero-gradient-end: 200 85% 65%;
+    
+    --shadow-soft: 0 2px 8px -1px hsl(200 85% 55% / 0.15), 0 1px 4px -1px hsl(200 85% 55% / 0.08);
+    --shadow-medium: 0 8px 20px -3px hsl(200 85% 55% / 0.2), 0 4px 8px -2px hsl(200 85% 55% / 0.1);
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 200 85% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 200 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary-gradient-start)), hsl(var(--primary-gradient-end)));
+  }
+  
+  .gradient-hero {
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-start)), hsl(var(--hero-gradient-end)));
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary-gradient-start)), hsl(var(--primary-gradient-end)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
