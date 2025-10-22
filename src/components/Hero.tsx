@@ -33,7 +33,7 @@ const Hero = () => {
       <div className="absolute top-20 sm:top-24 left-1/2 -translate-x-1/2 z-10">
 
         <span className="text-sm font-semibold tracking-[0.3em] text-accent uppercase opacity-90">
-          Portfolio
+          
         </span>
       </div>
 
