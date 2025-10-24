@@ -14,8 +14,8 @@ const Projects = () => {
       description:
         'A food recommendation web application that helps users discover new dining options based on their preferences and location. Built with modern web technologies for a seamless user experience.',
       technologies: ['React', 'Django', 'Python', 'CSS'],
-      github: '#',
-      live: '#',
+      github: 'https://github.com/zunayed-Ahmed0/Koikhabo',
+      live: '#https://koikhabo.vercel.app',
       gradient: 'from-blue-500 to-cyan-500',
     },
   ];

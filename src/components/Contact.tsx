@@ -41,11 +41,9 @@ const Contact = () => {
     
     if (!formRef.current) return;
 
-    // You'll need to set up EmailJS service
-    // Replace these with your actual EmailJS credentials
-    const serviceId = 'YOUR_SERVICE_ID';
-    const templateId = 'YOUR_TEMPLATE_ID';
-    const publicKey = 'YOUR_PUBLIC_KEY';
+    const serviceId = 'service_mvezorf';
+    const templateId = 'template_ccpuzlw';
+    const publicKey = 'fQ5S_E77EXwe64uGK';
 
     setIsSubmitting(true);
 
@@ -59,6 +57,7 @@ const Contact = () => {
       
       formRef.current.reset();
     } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
         title: 'Failed to send message',
         description: 'Please try again or contact me directly via email.',
@@ -98,7 +97,6 @@ const Contact = () => {
 
   return (
     <section id="contact" ref={sectionRef} className="py-20 md:py-32 relative">
-      {/* Background decoration */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-primary/5 rounded-full blur-3xl" />
@@ -162,6 +160,9 @@ const Contact = () => {
             }`}
           >
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              {/* Hidden field for EmailJS recipient */}
+              <input type="hidden" name="to_email" value="zunayed.a.ahmed20@gmail.com" />
+
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
                 <Input
@@ -184,6 +185,16 @@ const Contact = () => {
                   className="transition-smooth focus:border-primary"
                 />
               </div>
+<div className="space-y-2">
+  <Label htmlFor="subject">Subject</Label>
+  <Input
+    id="subject"
+    name="subject"
+    placeholder="Subject of your message"
+    required
+    className="transition-smooth focus:border-primary"
+  />
+</div>
 
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>

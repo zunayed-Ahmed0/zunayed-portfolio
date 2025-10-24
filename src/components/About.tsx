@@ -47,26 +47,29 @@ const About = () => {
             }`}
             style={{ animationDelay: '200ms' }}
           >
-            <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
-              <p>
-                I'm a <span className="text-foreground font-semibold">Computer Science and Engineering student</span> passionate
-                about technology, problem-solving, and clean design. My journey in tech is driven by curiosity and
-                a constant desire to learn and create.
-              </p>
-              <p>
-                My focus is on building <span className="text-foreground font-semibold">efficient, user-friendly digital products</span> that
-                combine creativity with logic. I believe that great software is not just about functionality, but
-                also about delivering exceptional user experiences.
-              </p>
-              <p>
-                Whether it's solving complex algorithmic challenges, developing web applications, or working on
-                innovative projects, I approach each task with <span className="text-foreground font-semibold">dedication and attention to detail</span>.
-                I'm always eager to collaborate, learn from others, and contribute to meaningful projects.
-              </p>
-              <p className="text-foreground font-medium pt-4">
-                Let's build something amazing together!
-              </p>
-            </div>
+           <div className="space-y-6 text-base sm:text-lg leading-relaxed text-muted-foreground">
+  <p>
+    I'm <span className="text-foreground font-semibold">Zunayed Ahmed</span>, a curious and driven 
+    <span className="text-foreground font-semibold"> Computer Science and Engineering student </span> 
+    passionate about technology, problem-solving, and creating innovative digital solutions. I thrive on challenges and enjoy exploring new areas in tech.
+  </p>
+
+  <p>
+    I actively participate in <span className="text-foreground font-semibold">competitive programming</span>, 
+    hackathons, and coding competitions, constantly sharpening my skills in algorithms, data structures, and full-stack development. 
+    I believe in turning complex problems into simple, efficient, and elegant solutions.
+  </p>
+
+  <p>
+    Over time, I have developed <span className="text-foreground font-semibold">web and software projects</span> that 
+    emphasize usability, performance, and clean design. I approach every project with <span className="text-foreground font-semibold">dedication, creativity, and a growth mindset</span>, learning from each experience.
+  </p>
+
+  <p className="text-foreground font-medium pt-4">
+    I’m always excited to take on new challenges, collaborate with like-minded innovators, and build <span className="text-foreground font-semibold">projects that make an impact</span>. Let’s create something remarkable together!
+  </p>
+</div>
+
           </Card>
         </div>
       </div>

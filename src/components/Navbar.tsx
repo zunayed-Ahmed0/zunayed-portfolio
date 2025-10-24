@@ -56,16 +56,14 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <a
-            href="#home"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToSection('#home');
-            }}
-            className="text-xl md:text-2xl font-bold font-poppins text-gradient"
-          >
-            ZA
-          </a>
+         <a
+  href="https://www.facebook.com/akibarfaan.zunayed.7"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-xl md:text-2xl font-bold font-poppins text-gradient"
+>
+  Zunayed
+</a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
